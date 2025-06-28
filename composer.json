@@ -1,0 +1,27 @@
+{
+    "name": "biboletin/script-execution-timer",
+    "description": "Script execution time tracker",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "Biboletin\\ScriptExecutionTimer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "biboletin",
+            "email": "shady_fan@abv.bg"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/var-dumper": "7.3.x-dev",
+        "squizlabs/php_codesniffer": "*",
+        "phpstan/phpstan": "2.1.x-dev",
+        "vimeo/psalm": "^7.0@dev",
+        "phpunit/phpunit": "^12"
+    },
+    "require": {}
+}
