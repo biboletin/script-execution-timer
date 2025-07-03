@@ -9,11 +9,17 @@ $timer = new ScriptExecutionTimer();
 $timer->start('test1');
 
 // Simulate some processing time
-usleep(50000000); // 0.5 seconds
+// usleep(500000); // 0.5 seconds
 $timer->stop('test1');
 $timer->start('test2');
 // Simulate some more processing time
 usleep(300000); // 0.3 seconds
+
+// Simulate some more memory usage
+for ($i = 0; $i < 100000; $i++) {
+    $array[] = str_repeat('a', 512); // Allocate 1KB of memory
+}
+
 $timer->stop('test2');
 
 $timer->sendHeader();
